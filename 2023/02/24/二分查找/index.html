@@ -16,19 +16,19 @@
   <meta name="author" content="wangxinhua">
   <meta name="keywords" content="">
   
-    <meta name="description" content="二分查找 二分查找是个比较简单的算法,其思想很容易理解,二分法可以在O(logn)的时间复杂度上实现对有序序列的查找.  使用二分查找需要满足两个条件:  查找的序列是有序的 查找的数量为1  例如实现在一个有序且无重复元素的数组中查询某个元素的位置即可使用二分查找. 在实现二分查找中,除了需要注意题目是否满足查找的条件外,还要关注二分查找的重点:  目标元素查找区间的定义 查找的区间定义: [l">
+    <meta name="description" content="二分查找1.基本条件二分查找是个比较简单的算法,其思想很容易理解,二分法可以在O(logn)的时间复杂度上实现对有序序列的查找. 使用二分查找需要满足两个条件:  查找的序列是有序的 查找的数量为1  例如实现在一个有序且无重复元素的数组中查询某个元素的位置即可使用二分查找. 在实现二分查找中,除了需要注意题目是否满足查找的条件外,还要关注二分查找的重点:  目标元素查找区间的定义 查找的区间定义">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二分查找">
 <meta property="og:url" content="http://example.com/2023/02/24/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/index.html">
 <meta property="og:site_name" content="Zachary">
-<meta property="og:description" content="二分查找 二分查找是个比较简单的算法,其思想很容易理解,二分法可以在O(logn)的时间复杂度上实现对有序序列的查找.  使用二分查找需要满足两个条件:  查找的序列是有序的 查找的数量为1  例如实现在一个有序且无重复元素的数组中查询某个元素的位置即可使用二分查找. 在实现二分查找中,除了需要注意题目是否满足查找的条件外,还要关注二分查找的重点:  目标元素查找区间的定义 查找的区间定义: [l">
+<meta property="og:description" content="二分查找1.基本条件二分查找是个比较简单的算法,其思想很容易理解,二分法可以在O(logn)的时间复杂度上实现对有序序列的查找. 使用二分查找需要满足两个条件:  查找的序列是有序的 查找的数量为1  例如实现在一个有序且无重复元素的数组中查询某个元素的位置即可使用二分查找. 在实现二分查找中,除了需要注意题目是否满足查找的条件外,还要关注二分查找的重点:  目标元素查找区间的定义 查找的区间定义">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2023/02/24/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/eg.png">
 <meta property="og:image" content="d:\hexo\hexo-blog\source_posts\%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE\eg.png">
 <meta property="og:image" content="http://example.com/2023/02/24/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/eg1.png">
 <meta property="og:image" content="d:\hexo\hexo-blog\source_posts\%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE\eg1.png">
 <meta property="article:published_time" content="2023-02-24T07:33:02.000Z">
-<meta property="article:modified_time" content="2023-02-24T13:01:08.495Z">
+<meta property="article:modified_time" content="2023-02-24T13:05:10.129Z">
 <meta property="article:author" content="wangxinhua">
 <meta property="article:tag" content="原创">
 <meta name="twitter:card" content="summary_large_image">
@@ -294,9 +294,7 @@
             
               <div class="markdown-body">
                 
-                <h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><ol>
-<li>二分查找是个比较简单的算法,其思想很容易理解,二分法可以在O(logn)的时间复杂度上实现对有序序列的查找.</li>
-</ol>
+                <h1 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h1><h2 id="1-基本条件"><a href="#1-基本条件" class="headerlink" title="1.基本条件"></a>1.基本条件</h2><p>二分查找是个比较简单的算法,其思想很容易理解,二分法可以在O(logn)的时间复杂度上实现对有序序列的查找.</p>
 <p>使用二分查找需要满足两个条件:</p>
 <ul>
 <li>查找的序列是有序的</li>
@@ -312,9 +310,7 @@
 </ul>
 </li>
 </ul>
-<ol start="2">
-<li>我们以<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-search/?envType=study-plan&id=suan-fa-ru-men&plan=algorithms&plan_progress=fotpttc">704. 二分查找 - 力扣（Leetcode）</a>作为例题,来描述一下二分查找.</li>
-</ol>
+<h2 id="2-例题"><a href="#2-例题" class="headerlink" title="2.例题"></a>2.例题</h2><p>我们以<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-search/?envType=study-plan&id=suan-fa-ru-men&plan=algorithms&plan_progress=fotpttc">704. 二分查找 - 力扣（Leetcode）</a>作为例题,来描述一下二分查找.</p>
 <blockquote>
 <p>给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p>
 <p>示例:</p>
@@ -333,10 +329,7 @@
 </ul>
 <p>不断迭代,直到查找到目标元素.二分查找每次只查找一半的元素,时间复杂度为O(logn)</p>
 <p>虽然二分查找的思想很简单,但是要考虑清楚具体区间的设计以及边界值是否进入到下一次的查找.</p>
-<ol start="3">
-<li>左闭右闭区间写法:</li>
-</ol>
-<p>[left, right]</p>
+<h2 id="3-左闭右闭区间写法"><a href="#3-左闭右闭区间写法" class="headerlink" title="3.左闭右闭区间写法:"></a>3.左闭右闭区间写法:</h2><p>[left, right]</p>
 <p>无论是左闭右闭还是左闭右开的写法其实都差不多,但是都需要注意边界和循环条件的处理.</p>
 <p>循环条件使用 <code> while (left &lt;= right)</code> 考虑target在<code>[left, right]</code>区间,当<code> left == right</code>时区间和结果都是有意义的.</p>
 <p>代码如下:</p>
@@ -354,10 +347,7 @@
 
 <p><img src="D:\hexo\hexo-blog\source_posts\二分查找\eg.png" srcset="/img/loading.gif" lazyload alt="eg"></p>
 <p>当前一步<code>left</code>在6的位置时,会因为没有找到目标值而右移,在右移之后<code>left == right</code>,此时跳出了循环,而错过了正确值.</p>
-<ol start="4">
-<li>左闭右开的写法</li>
-</ol>
-<p>类似的,为了保证区间及查询的有效性,需要注意:</p>
+<h2 id="4-左闭右开的写法"><a href="#4-左闭右开的写法" class="headerlink" title="4. 左闭右开的写法"></a>4. 左闭右开的写法</h2><p>类似的,为了保证区间及查询的有效性,需要注意:</p>
 <ul>
 <li>循环条件为 <code>while (left &lt; right)</code></li>
 <li>判断条件 <code>if (nums[middle] &gt; target) right = middle</code></li>
@@ -371,8 +361,7 @@
 
 <p><img src="D:\hexo\hexo-blog\source_posts\二分查找\eg1.png" srcset="/img/loading.gif" lazyload alt="eg1"></p>
 <p>前一步<code>right</code> 在下标为8的位置,在进行本次判断时会造成死循环.</p>
-<p>相关题目:</p>
-<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-insert-position/?envType=study-plan&id=suan-fa-ru-men&plan=algorithms&plan_progress=fotpttc">35. 搜索插入位置 - 力扣（Leetcode）</a></p>
+<h2 id="相关题目"><a href="#相关题目" class="headerlink" title="相关题目:"></a>相关题目:</h2><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-insert-position/?envType=study-plan&id=suan-fa-ru-men&plan=algorithms&plan_progress=fotpttc">35. 搜索插入位置 - 力扣（Leetcode）</a></p>
 <p>板子题,没啥好说的</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/first-bad-version/?envType=study-plan&id=suan-fa-ru-men&plan=algorithms&plan_progress=fotpttc">278. 第一个错误的版本 - 力扣（Leetcode）</a></p>
 <p>套了个函数的板子题</p>
