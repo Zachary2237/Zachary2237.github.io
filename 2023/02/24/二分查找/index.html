@@ -16,21 +16,25 @@
   <meta name="author" content="wangxinhua">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="二分查找 二分查找是个比较简单的算法,其思想很容易理解,二分法可以在O(logn)的时间复杂度上实现对有序序列的查找.  使用二分查找需要满足两个条件:  查找的序列是有序的 查找的数量为1  例如实现在一个有序且无重复元素的数组中查询某个元素的位置即可使用二分查找. 在实现二分查找中,除了需要注意题目是否满足查找的条件外,还要关注二分查找的重点:  目标元素查找区间的定义 查找的区间定义: [l">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/02/24/hello-world/index.html">
+<meta property="og:title" content="二分查找">
+<meta property="og:url" content="http://example.com/2023/02/24/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/index.html">
 <meta property="og:site_name" content="Zachary">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="二分查找 二分查找是个比较简单的算法,其思想很容易理解,二分法可以在O(logn)的时间复杂度上实现对有序序列的查找.  使用二分查找需要满足两个条件:  查找的序列是有序的 查找的数量为1  例如实现在一个有序且无重复元素的数组中查询某个元素的位置即可使用二分查找. 在实现二分查找中,除了需要注意题目是否满足查找的条件外,还要关注二分查找的重点:  目标元素查找区间的定义 查找的区间定义: [l">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-24T04:00:26.599Z">
-<meta property="article:modified_time" content="2023-02-24T04:00:26.599Z">
+<meta property="og:image" content="d:\hexo\hexo-blog\source_posts\%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE\eg.png">
+<meta property="og:image" content="d:\hexo\hexo-blog\source_posts\%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE\eg1.png">
+<meta property="article:published_time" content="2023-02-24T07:33:02.000Z">
+<meta property="article:modified_time" content="2023-02-24T12:56:42.422Z">
 <meta property="article:author" content="wangxinhua">
+<meta property="article:tag" content="原创">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="d:\hexo\hexo-blog\source_posts\%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE\eg.png">
   
   
   
-  <title>Hello World - Zachary</title>
+  <title>二分查找 - Zachary</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -211,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="二分查找"></span>
           
         </div>
 
@@ -222,8 +226,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-24 12:00" pubdate>
-          2023年2月24日 中午
+        <time datetime="2023-02-24 15:33" pubdate>
+          2023年2月24日 下午
         </time>
       </span>
     
@@ -234,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          367 字
+          2.1k 字
         
       </span>
     
@@ -245,7 +249,7 @@
         
         
         
-          4 分钟
+          18 分钟
         
       </span>
     
@@ -283,24 +287,95 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">二分查找</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+                <h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><ol>
+<li>二分查找是个比较简单的算法,其思想很容易理解,二分法可以在O(logn)的时间复杂度上实现对有序序列的查找.</li>
+</ol>
+<p>使用二分查找需要满足两个条件:</p>
+<ul>
+<li>查找的序列是有序的</li>
+<li>查找的数量为1</li>
+</ul>
+<p>例如实现在一个有序且无重复元素的数组中查询某个元素的位置即可使用二分查找.</p>
+<p>在实现二分查找中,除了需要注意题目是否满足查找的条件外,还要关注二分查找的重点:</p>
+<ul>
+<li>目标元素查找区间的定义</li>
+<li>查找的区间定义:<ul>
+<li>[left, right]</li>
+<li>[left, right)</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>我们以<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-search/?envType=study-plan&id=suan-fa-ru-men&plan=algorithms&plan_progress=fotpttc">704. 二分查找 - 力扣（Leetcode）</a>作为例题,来描述一下二分查找.</li>
+</ol>
+<blockquote>
+<p>给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p>
+<p>示例:</p>
+<p>输入: nums &#x3D; [-1,0,3,5,9,12], target &#x3D; 9<br>输出: 4<br>解释: 9 出现在 nums 中并且下标为 4</p>
+<p>输入: nums &#x3D; [-1,0,3,5,9,12], target &#x3D; 2<br>输出: -1<br>解释: 2 不存在 nums 中因此返回 -1</p>
+</blockquote>
+<p>这是一道很标准的模板题,整个数组是<strong>重复</strong>的且没有重复元素.</p>
+<ul>
+<li>选择数组中间元素与目标值比较</li>
+<li>若相等,返回该下标</li>
+<li>若不相等:<ul>
+<li>数组中间元素小于目标值,则中间及右边的元素全部大于目标值</li>
+<li>数组中间元素大于目标值,则中间及左边的元素全部小于目标值</li>
+</ul>
+</li>
+</ul>
+<p>不断迭代,直到查找到目标元素.二分查找每次只查找一半的元素,时间复杂度为O(logn)</p>
+<p>虽然二分查找的思想很简单,但是要考虑清楚具体区间的设计以及边界值是否进入到下一次的查找.</p>
+<ol start="3">
+<li>左闭右闭区间写法:</li>
+</ol>
+<p>[left, right]</p>
+<p>无论是左闭右闭还是左闭右开的写法其实都差不多,但是都需要注意边界和循环条件的处理.</p>
+<p>循环条件使用 <code> while (left &lt;= right)</code> 考虑target在<code>[left, right]</code>区间,当<code> left == right</code>时区间和结果都是有意义的.</p>
+<p>代码如下:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">search</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> target)</span> </span>&#123;<br>        <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> right = nums.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">while</span> (left &lt;= right) &#123;<br>        	<span class="hljs-type">int</span> middle = left + (right - left) / <span class="hljs-number">2</span>;<br>        	<span class="hljs-keyword">if</span> (nums[middle] &lt; target) &#123;<br>        		left = middle + <span class="hljs-number">1</span>;<br>        	&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[middle] &gt; target) &#123;<br>        		right = middle - <span class="hljs-number">1</span>;<br>        	&#125; <span class="hljs-keyword">else</span> &#123;<br>        		<span class="hljs-keyword">return</span> middle;<br>        	&#125;<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+<p>需要注意的几个点:</p>
+<ul>
+<li><code> right</code>初值为<code>nums.size() - 1</code>, 保证区间<code>[left, right]</code></li>
+<li>循环条件为 <code>while (left &lt;= right)</code></li>
+</ul>
+<p>当循环条件错误使用为 <code>while (left &lt; right)</code>时,会导致如下图的错误:</p>
+<p><img src="D:\hexo\hexo-blog\source_posts\二分查找\eg.png" srcset="/img/loading.gif" lazyload alt="eg"></p>
+<p>当前一步<code>left</code>在6的位置时,会因为没有找到目标值而右移,在右移之后<code>left == right</code>,此时跳出了循环,而错过了正确值.</p>
+<ol start="4">
+<li>左闭右开的写法</li>
+</ol>
+<p>类似的,为了保证区间及查询的有效性,需要注意:</p>
+<ul>
+<li>循环条件为 <code>while (left &lt; right)</code></li>
+<li>判断条件 <code>if (nums[middle] &gt; target) right = middle</code></li>
+<li>初值<code>right = nums.size()</code></li>
+</ul>
+<p>代码如下:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">search1</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> target)</span> </span>&#123;<br>        <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> right = nums.<span class="hljs-built_in">size</span>();<br>        <span class="hljs-keyword">while</span> (left &lt; right) &#123;<br>        	<span class="hljs-type">int</span> middle = left + (right - left) / <span class="hljs-number">2</span>;<br>        	<span class="hljs-keyword">if</span> (nums[middle] &gt; target) &#123;<br>        		right = middle;<br>        	&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[middle] &lt; target) &#123;<br>        		left = middle + <span class="hljs-number">1</span>;<br>        	&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> middle;<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>当循环条件错误写为 <code>while (left &lt;= right)</code>时,会出现如下错误:</p>
+<p><img src="D:\hexo\hexo-blog\source_posts\二分查找\eg1.png" srcset="/img/loading.gif" lazyload alt="eg1"></p>
+<p>前一步<code>right</code> 在下标为8的位置,在进行本次判断时会造成死循环.</p>
+<p>相关题目:</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-insert-position/?envType=study-plan&id=suan-fa-ru-men&plan=algorithms&plan_progress=fotpttc">35. 搜索插入位置 - 力扣（Leetcode）</a></p>
+<p>板子题,没啥好说的</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/first-bad-version/?envType=study-plan&id=suan-fa-ru-men&plan=algorithms&plan_progress=fotpttc">278. 第一个错误的版本 - 力扣（Leetcode）</a></p>
+<p>套了个函数的板子题</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/description/">34. 在排序数组中查找元素的第一个和最后一个位置 - 力扣（Leetcode）</a></p>
+<p>34题还是比较有难度的,这里挖个坑,放上几天,下次回来填坑.</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/sqrtx/description/">69. x 的平方根 - 力扣（Leetcode）</a></p>
+<p>69题是常见的面试题,还是很有意思的,我肯定不会直接想到二分查找,但是知道二分的思路还是比较好写的</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-perfect-square/description/">367. 有效的完全平方数 - 力扣（Leetcode）</a></p>
+<p>和69一模一样</p>
 
                 
               </div>
@@ -309,6 +384,34 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%8E%9F%E5%88%9B/">#原创</a>
+      
+    </div>
   
 </div>
 
@@ -318,8 +421,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2023/02/24/hello-world/</div>
+      <div>二分查找</div>
+      <div>http://example.com/2023/02/24/二分查找/</div>
     </div>
     <div class="license-meta">
       
@@ -363,18 +466,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/24/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="二分查找">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">二分查找</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/06/10/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/" title="测试文章">
-                        <span class="hidden-mobile">测试文章</span>
+                      <a href="/2023/02/24/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
